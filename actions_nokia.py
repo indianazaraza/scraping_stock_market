@@ -29,7 +29,7 @@ def closing_time():
 
 
 def write_csv(file):
-	while not closing_time:
+	while not closing_time():
 		data = [[values[0:6],values[12:20],current_date()]]
 		write_file = csv.writer(file)
 		write_file.writerows(data)
